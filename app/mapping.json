@@ -1,0 +1,68 @@
+{
+    "000200": {
+        "denomination": "200",
+        "place": "Cánh đồng lúa Tây Nguyên",
+        "description": "Hình ảnh máy cày trên cánh đồng biểu tượng cho sự chuyển mình từ nông nghiệp thô sơ sang cơ giới hóa. Đây là tờ tiền hiếm hoi tôn vinh lao động sản xuất thay vì một công trình kiến trúc cụ thể",
+        "type": "Tiền giấy"
+    },
+    "000500": {
+        "denomination": "500",
+        "place": "Cảng Hải Phòng",
+        "description": "Cửa ngõ giao thương đường biển lớn nhất miền Bắc với những con tàu container nhộn nhịp trong ánh bình minh. Hình ảnh này khắc họa sức sống công nghiệp mạnh mẽ của "Thành phố Hoa phượng đỏ"",
+        "type": "Tiền giấy"
+    },
+    "0001000": {
+        "denomination": "1000",
+        "place": "Khai thác gỗ tại Tây Nguyên",
+        "description": "Khung cảnh những chú voi và người thợ rừng làm việc giữa đại ngàn xanh thẳm của vùng đất đỏ bazan. Hình ảnh gợi nhớ về một thời kỳ khai thác tài nguyên và vẻ đẹp lao động đặc trưng của vùng cao",
+        "type": "Tiền giấy"
+    },
+    "002000": {
+        "denomination": "2000",
+        "place": "Cánh đồng lúa Tây Nguyên",
+        "description": "Nơi đây từng là nhà máy dệt lớn nhất Đông Dương, mang đậm dấu ấn lịch sử của phong trào công nhân Việt Nam. Hình ảnh các nữ công nhân bên máy dệt thể hiện tinh thần lao động hăng say thời kỳ đổi mới",
+        "type": "Tiền giấy"
+    },
+    "005000": {
+        "denomination": "5000",
+        "place": "Nhà máy Thủy điện Trị An",
+        "description": "Công trình được xây dựng trên dòng sông Đồng Nai với sự hỗ trợ của Liên Xô, là nguồn điện quan trọng cho miền Nam. Đây là biểu tượng của tinh thần hữu nghị và khát vọng chinh phục thiên nhiên để phục vụ tổ quốc",
+        "type": "Tiền giấy"
+    },
+    "010000": {
+        "denomination": "10000",
+        "place": "Mỏ dầu Bạch Hổ (Vũng Tàu)",
+        "description": "Mỏ dầu Bạch Hổ là một trong những mỏ dầu lớn nhất Việt Nam, đóng vai trò quan trọng trong việc cung cấp năng lượng cho cả nước. Hình ảnh này thể hiện sự phát triển của ngành công nghiệp dầu khí",
+        "type": "Tiền polymer"
+    },
+    "020000": {
+        "denomination": "20000",
+        "place": "Chùa Cầu (Hội An)",
+        "description": "Chùa Cầu là một trong những công trình kiến trúc nổi tiếng nhất của Hội An, thể hiện sự giao thoa văn hóa giữa Việt Nam và các nước phương Tây. Hình ảnh này khắc họa giá trị văn hóa và lịch sử của thành phố cổ",
+        "type": "Tiền polymer"
+    },
+    "050000": {
+        "denomination": "50000",
+        "place": "Nghinh Lương Đình và Phu Văn Lâu (Huế)",
+        "description": "Hai công trình kiến trúc đặc trưng của triều Nguyễn nằm soi bóng bên dòng sông Hương thơ mộng, cổ kính. Nơi đây từng là địa điểm nghỉ chân hóng mát và niêm yết các cáo thị quan trọng của triều đình xưa. Hình ảnh này gợi nhớ về một thời kỳ lịch sử hào hùng và vẻ đẹp văn hóa đặc sắc của cố đô Huế",
+        "type": "Tiền polymer"
+    },
+    "100000": {
+        "denomination": "100000",
+        "place": "Khuê Văn Các (Văn Miếu - Quốc Tử Giám)",
+        "description": "Khuê Văn Các là một trong những công trình kiến trúc nổi tiếng nhất của Văn Miếu - Quốc Tử Giám, thể hiện sự giao thoa văn hóa giữa Việt Nam và các nước phương Tây. Hình ảnh này khắc họa giá trị văn hóa và lịch sử của thành phố cổ",
+        "type": "Tiền polymer"
+    },
+    "200000": {
+        "denomination": "200000",
+        "place": "Hòn Đỉnh Hương (Vịnh Hạ Long)",
+        "description": "Hòn Đỉnh Hương là một trong những biểu tượng nổi bật của Vịnh Hạ Long, với hình dáng độc đáo và vẻ đẹp hùng vĩ. Hình ảnh này thể hiện sự kỳ vĩ và đa dạng sinh học của vịnh, đồng thời là biểu tượng của niềm tự hào dân tộc về di sản thiên nhiên độc đáo của Việt Nam",
+        "type": "Tiền polymer"
+    },
+    "500000": {
+        "denomination": "500000",
+        "place": "Làng Sen (Nam Đàn, Nghệ An)",
+        "description": "Ngôi nhà tranh giản dị tại quê nội của Chủ tịch Hồ Chí Minh, nơi nuôi dưỡng tâm hồn và lòng yêu nước của vị lãnh tụ vĩ đại. Di tích lịch sử này mang đậm hồn quê Việt với mái tranh, lũy tre và hàng cau xanh ngắt. Hình ảnh này không chỉ tôn vinh sự giản dị và khiêm nhường của Bác Hồ mà còn là biểu tượng của tình yêu quê hương, đất nước và tinh thần kiên cường của dân tộc Việt Nam",
+        "type": "Tiền polymer"
+    }
+}
