@@ -2,7 +2,7 @@
     {
         "image": "data/val\\000200\\000200_102.png",
         "true": "000200",
-        "pred": "002000"
+        "pred": "200000"
     },
     {
         "image": "data/val\\000200\\000200_118.png",
@@ -37,12 +37,12 @@
     {
         "image": "data/val\\000200\\000200_149.png",
         "true": "000200",
-        "pred": "500000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\000200\\000200_152.png",
         "true": "000200",
-        "pred": "100000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\000200\\000200_159.png",
@@ -77,7 +77,7 @@
     {
         "image": "data/val\\000200\\000200_186.png",
         "true": "000200",
-        "pred": "000200"
+        "pred": "200000"
     },
     {
         "image": "data/val\\000200\\000200_196.png",
@@ -147,7 +147,7 @@
     {
         "image": "data/val\\000200\\000200_41.png",
         "true": "000200",
-        "pred": "001000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\000200\\000200_48.png",
@@ -177,12 +177,12 @@
     {
         "image": "data/val\\000200\\000200_83.png",
         "true": "000200",
-        "pred": "002000"
+        "pred": "100000"
     },
     {
         "image": "data/val\\000200\\000200_92.png",
         "true": "000200",
-        "pred": "100000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\000200\\000200_99.png",
@@ -192,7 +192,7 @@
     {
         "image": "data/val\\000200\\1633160904739.jpg",
         "true": "000200",
-        "pred": "001000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\000200\\1633160922760.jpg",
@@ -202,17 +202,17 @@
     {
         "image": "data/val\\000200\\1633160948401.jpg",
         "true": "000200",
-        "pred": "000200"
+        "pred": "002000"
     },
     {
         "image": "data/val\\000200\\1633161042926.jpg",
         "true": "000200",
-        "pred": "005000"
+        "pred": "000500"
     },
     {
         "image": "data/val\\000500\\000500_107.png",
         "true": "000500",
-        "pred": "100000"
+        "pred": "500000"
     },
     {
         "image": "data/val\\000500\\000500_111.png",
@@ -247,7 +247,7 @@
     {
         "image": "data/val\\000500\\000500_131.png",
         "true": "000500",
-        "pred": "100000"
+        "pred": "200000"
     },
     {
         "image": "data/val\\000500\\000500_136.png",
@@ -342,7 +342,7 @@
     {
         "image": "data/val\\000500\\000500_235.png",
         "true": "000500",
-        "pred": "500000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\000500\\000500_237.png",
@@ -407,12 +407,12 @@
     {
         "image": "data/val\\000500\\1633072006459.jpg",
         "true": "000500",
-        "pred": "100000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\000500\\1633072029819.jpg",
         "true": "000500",
-        "pred": "000500"
+        "pred": "000200"
     },
     {
         "image": "data/val\\001000\\001000_103.png",
@@ -422,7 +422,7 @@
     {
         "image": "data/val\\001000\\001000_107.png",
         "true": "001000",
-        "pred": "001000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\001000\\001000_111.png",
@@ -467,7 +467,7 @@
     {
         "image": "data/val\\001000\\001000_149.png",
         "true": "001000",
-        "pred": "200000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\001000\\001000_152.png",
@@ -547,7 +547,7 @@
     {
         "image": "data/val\\001000\\001000_3.png",
         "true": "001000",
-        "pred": "002000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\001000\\001000_49.png",
@@ -562,7 +562,7 @@
     {
         "image": "data/val\\001000\\001000_6.png",
         "true": "001000",
-        "pred": "000200"
+        "pred": "noise"
     },
     {
         "image": "data/val\\001000\\001000_63.png",
@@ -612,7 +612,7 @@
     {
         "image": "data/val\\001000\\1633071558575.jpg",
         "true": "001000",
-        "pred": "001000"
+        "pred": "500000"
     },
     {
         "image": "data/val\\001000\\1633071599010.jpg",
@@ -627,7 +627,7 @@
     {
         "image": "data/val\\001000\\1633074211907.jpg",
         "true": "001000",
-        "pred": "001000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\002000\\002000_103.png",
@@ -637,7 +637,7 @@
     {
         "image": "data/val\\002000\\002000_114.png",
         "true": "002000",
-        "pred": "100000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\002000\\002000_115.png",
@@ -652,12 +652,12 @@
     {
         "image": "data/val\\002000\\002000_120.png",
         "true": "002000",
-        "pred": "000200"
+        "pred": "001000"
     },
     {
         "image": "data/val\\002000\\002000_136.png",
         "true": "002000",
-        "pred": "100000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\002000\\002000_139.png",
@@ -702,17 +702,17 @@
     {
         "image": "data/val\\002000\\002000_197.png",
         "true": "002000",
-        "pred": "500000"
+        "pred": "100000"
     },
     {
         "image": "data/val\\002000\\002000_199.png",
         "true": "002000",
-        "pred": "500000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\002000\\002000_200.png",
         "true": "002000",
-        "pred": "100000"
+        "pred": "002000"
     },
     {
         "image": "data/val\\002000\\002000_201.png",
@@ -747,7 +747,7 @@
     {
         "image": "data/val\\002000\\002000_23.png",
         "true": "002000",
-        "pred": "100000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\002000\\002000_231.png",
@@ -767,7 +767,7 @@
     {
         "image": "data/val\\002000\\002000_24.png",
         "true": "002000",
-        "pred": "100000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\002000\\002000_246.png",
@@ -827,12 +827,12 @@
     {
         "image": "data/val\\002000\\1633071825065.jpg",
         "true": "002000",
-        "pred": "001000"
+        "pred": "000500"
     },
     {
         "image": "data/val\\002000\\1633071828932.jpg",
         "true": "002000",
-        "pred": "005000"
+        "pred": "100000"
     },
     {
         "image": "data/val\\005000\\005000_112.png",
@@ -902,7 +902,7 @@
     {
         "image": "data/val\\005000\\005000_197.png",
         "true": "005000",
-        "pred": "200000"
+        "pred": "005000"
     },
     {
         "image": "data/val\\005000\\005000_214.png",
@@ -952,7 +952,7 @@
     {
         "image": "data/val\\005000\\1633071678721.jpg",
         "true": "005000",
-        "pred": "005000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\005000\\1633071683781.jpg",
@@ -987,7 +987,7 @@
     {
         "image": "data/val\\010000\\010000_137.png",
         "true": "010000",
-        "pred": "100000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\010000_148.png",
@@ -1002,7 +1002,7 @@
     {
         "image": "data/val\\010000\\010000_161.png",
         "true": "010000",
-        "pred": "001000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\010000_163.png",
@@ -1042,22 +1042,22 @@
     {
         "image": "data/val\\010000\\010000_219.png",
         "true": "010000",
-        "pred": "200000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\010000\\010000_224.png",
         "true": "010000",
-        "pred": "200000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\010000_244.png",
         "true": "010000",
-        "pred": "100000"
+        "pred": "002000"
     },
     {
         "image": "data/val\\010000\\010000_249.png",
         "true": "010000",
-        "pred": "100000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\010000_26.png",
@@ -1097,7 +1097,7 @@
     {
         "image": "data/val\\010000\\010000_5.png",
         "true": "010000",
-        "pred": "001000"
+        "pred": "500000"
     },
     {
         "image": "data/val\\010000\\010000_51.png",
@@ -1132,12 +1132,12 @@
     {
         "image": "data/val\\010000\\010000_9.png",
         "true": "010000",
-        "pred": "100000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\010000_93.png",
         "true": "010000",
-        "pred": "500000"
+        "pred": "100000"
     },
     {
         "image": "data/val\\010000\\1018.png",
@@ -1207,7 +1207,7 @@
     {
         "image": "data/val\\010000\\1090.png",
         "true": "010000",
-        "pred": "noise"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\1091.png",
@@ -1477,7 +1477,7 @@
     {
         "image": "data/val\\010000\\1408.png",
         "true": "010000",
-        "pred": "noise"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\1411.png",
@@ -2117,12 +2117,12 @@
     {
         "image": "data/val\\010000\\708.png",
         "true": "010000",
-        "pred": "200000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\713.png",
         "true": "010000",
-        "pred": "200000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\730.png",
@@ -2132,12 +2132,12 @@
     {
         "image": "data/val\\010000\\731.png",
         "true": "010000",
-        "pred": "001000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\732.png",
         "true": "010000",
-        "pred": "100000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\759.png",
@@ -2147,7 +2147,7 @@
     {
         "image": "data/val\\010000\\766.png",
         "true": "010000",
-        "pred": "noise"
+        "pred": "010000"
     },
     {
         "image": "data/val\\010000\\767.png",
@@ -2372,7 +2372,7 @@
     {
         "image": "data/val\\020000\\020000_143.png",
         "true": "020000",
-        "pred": "005000"
+        "pred": "020000"
     },
     {
         "image": "data/val\\020000\\020000_148.png",
@@ -2402,7 +2402,7 @@
     {
         "image": "data/val\\020000\\020000_169.png",
         "true": "020000",
-        "pred": "100000"
+        "pred": "020000"
     },
     {
         "image": "data/val\\020000\\020000_195.png",
@@ -2417,7 +2417,7 @@
     {
         "image": "data/val\\020000\\020000_222.png",
         "true": "020000",
-        "pred": "200000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\020000\\020000_233.png",
@@ -2427,7 +2427,7 @@
     {
         "image": "data/val\\020000\\020000_240.png",
         "true": "020000",
-        "pred": "005000"
+        "pred": "020000"
     },
     {
         "image": "data/val\\020000\\1002.png",
@@ -2837,17 +2837,17 @@
     {
         "image": "data/val\\020000\\1443.png",
         "true": "020000",
-        "pred": "100000"
+        "pred": "020000"
     },
     {
         "image": "data/val\\020000\\1447.png",
         "true": "020000",
-        "pred": "002000"
+        "pred": "020000"
     },
     {
         "image": "data/val\\020000\\1449.png",
         "true": "020000",
-        "pred": "002000"
+        "pred": "020000"
     },
     {
         "image": "data/val\\020000\\1460.png",
@@ -3037,7 +3037,7 @@
     {
         "image": "data/val\\020000\\1712.png",
         "true": "020000",
-        "pred": "020000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\020000\\1722.png",
@@ -3777,7 +3777,7 @@
     {
         "image": "data/val\\020000\\775.png",
         "true": "020000",
-        "pred": "050000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\020000\\777.png",
@@ -3787,12 +3787,12 @@
     {
         "image": "data/val\\020000\\778.png",
         "true": "020000",
-        "pred": "000500"
+        "pred": "200000"
     },
     {
         "image": "data/val\\020000\\790.png",
         "true": "020000",
-        "pred": "010000"
+        "pred": "020000"
     },
     {
         "image": "data/val\\020000\\794.png",
@@ -3957,7 +3957,7 @@
     {
         "image": "data/val\\050000\\050000_144.png",
         "true": "050000",
-        "pred": "100000"
+        "pred": "050000"
     },
     {
         "image": "data/val\\050000\\050000_148.png",
@@ -3992,7 +3992,7 @@
     {
         "image": "data/val\\050000\\050000_200.png",
         "true": "050000",
-        "pred": "200000"
+        "pred": "050000"
     },
     {
         "image": "data/val\\050000\\050000_206.png",
@@ -4012,22 +4012,22 @@
     {
         "image": "data/val\\050000\\050000_222.png",
         "true": "050000",
-        "pred": "100000"
+        "pred": "050000"
     },
     {
         "image": "data/val\\050000\\050000_223.png",
         "true": "050000",
-        "pred": "200000"
+        "pred": "050000"
     },
     {
         "image": "data/val\\050000\\050000_227.png",
         "true": "050000",
-        "pred": "100000"
+        "pred": "005000"
     },
     {
         "image": "data/val\\050000\\050000_240.png",
         "true": "050000",
-        "pred": "100000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\050000\\050000_247.png",
@@ -5277,7 +5277,7 @@
     {
         "image": "data/val\\050000\\885.png",
         "true": "050000",
-        "pred": "100000"
+        "pred": "000200"
     },
     {
         "image": "data/val\\050000\\906.png",
@@ -5752,7 +5752,7 @@
     {
         "image": "data/val\\200000\\200000_72.png",
         "true": "200000",
-        "pred": "002000"
+        "pred": "010000"
     },
     {
         "image": "data/val\\200000\\200000_83.png",
@@ -5807,7 +5807,7 @@
     {
         "image": "data/val\\500000\\1633072329800.jpg",
         "true": "500000",
-        "pred": "100000"
+        "pred": "500000"
     },
     {
         "image": "data/val\\500000\\1633073289163.jpg",
@@ -5822,7 +5822,7 @@
     {
         "image": "data/val\\500000\\1633074492181.jpg",
         "true": "500000",
-        "pred": "500000"
+        "pred": "200000"
     },
     {
         "image": "data/val\\500000\\500000_100.png",
@@ -5857,7 +5857,7 @@
     {
         "image": "data/val\\500000\\500000_132.png",
         "true": "500000",
-        "pred": "200000"
+        "pred": "500000"
     },
     {
         "image": "data/val\\500000\\500000_139.png",
@@ -5987,12 +5987,12 @@
     {
         "image": "data/val\\500000\\500000_86.png",
         "true": "500000",
-        "pred": "500000"
+        "pred": "001000"
     },
     {
         "image": "data/val\\500000\\500000_87.png",
         "true": "500000",
-        "pred": "500000"
+        "pred": "100000"
     },
     {
         "image": "data/val\\500000\\500000_9.png",
@@ -6002,22 +6002,22 @@
     {
         "image": "data/val\\noise\\000000_111.png",
         "true": "noise",
-        "pred": "002000"
+        "pred": "500000"
     },
     {
         "image": "data/val\\noise\\000000_119.png",
         "true": "noise",
-        "pred": "002000"
+        "pred": "050000"
     },
     {
         "image": "data/val\\noise\\000000_124.png",
         "true": "noise",
-        "pred": "100000"
+        "pred": "200000"
     },
     {
         "image": "data/val\\noise\\000000_125.png",
         "true": "noise",
-        "pred": "100000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_127.png",
@@ -6062,7 +6062,7 @@
     {
         "image": "data/val\\noise\\000000_161.png",
         "true": "noise",
-        "pred": "200000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_167.png",
@@ -6072,7 +6072,7 @@
     {
         "image": "data/val\\noise\\000000_169.png",
         "true": "noise",
-        "pred": "000500"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_171.png",
@@ -6082,32 +6082,32 @@
     {
         "image": "data/val\\noise\\000000_19.png",
         "true": "noise",
-        "pred": "200000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_197.png",
         "true": "noise",
-        "pred": "000200"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_199.png",
         "true": "noise",
-        "pred": "001000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_20.png",
         "true": "noise",
-        "pred": "200000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_201.png",
         "true": "noise",
-        "pred": "200000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_209.png",
         "true": "noise",
-        "pred": "001000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_21.png",
@@ -6117,7 +6117,7 @@
     {
         "image": "data/val\\noise\\000000_230.png",
         "true": "noise",
-        "pred": "100000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_231.png",
@@ -6127,7 +6127,7 @@
     {
         "image": "data/val\\noise\\000000_27.png",
         "true": "noise",
-        "pred": "500000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_3.png",
@@ -6137,22 +6137,22 @@
     {
         "image": "data/val\\noise\\000000_30.png",
         "true": "noise",
-        "pred": "100000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_31.png",
         "true": "noise",
-        "pred": "001000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_43.png",
         "true": "noise",
-        "pred": "100000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_50.png",
         "true": "noise",
-        "pred": "100000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_57.png",
@@ -6162,27 +6162,27 @@
     {
         "image": "data/val\\noise\\000000_61.png",
         "true": "noise",
-        "pred": "000500"
+        "pred": "001000"
     },
     {
         "image": "data/val\\noise\\000000_63.png",
         "true": "noise",
-        "pred": "500000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_67.png",
         "true": "noise",
-        "pred": "500000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_70.png",
         "true": "noise",
-        "pred": "500000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_72.png",
         "true": "noise",
-        "pred": "100000"
+        "pred": "noise"
     },
     {
         "image": "data/val\\noise\\000000_82.png",
