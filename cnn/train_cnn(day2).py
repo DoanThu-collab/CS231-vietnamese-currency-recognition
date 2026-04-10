@@ -5,39 +5,36 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms, models
-from sklearn.metrics import classification_report, confusion_matrix
-import matplotlib.pyplot as plt
-import seaborn as sns
+from sklearn.metrics import classification_report
 from tqdm import tqdm
 
-# 1. CẤU HÌNH ĐƯỜNG DẪN
+# 1. CẤU HÌNH & ĐƯỜNG DẪN
 data_dir = "data"
 train_dir = os.path.join(data_dir, "train")
 val_dir = os.path.join(data_dir, "val")
 test_dir = os.path.join(data_dir, "test")
 mapping_path = "app/mapping.json"
-model_save_path = "cnn/cnn_model.h5" # Lưu theo yêu cầu checklist
+model_save_path = "cnn/cnn_model.h5"
 
-# Tạo thư mục cnn nếu chưa có
-if not os.path.exists('cnn'):
-    os.makedirs('cnn')
+if not os.path.exists('cnn'): os.makedirs('cnn')
 
-# Load mapping
+# Load mapping để hiển thị tên mệnh giá chuẩn
 with open(mapping_path, 'r', encoding='utf-8') as f:
     mapping = json.load(f)
 
-def get_denomination_from_folder(folder_name):
+def get_name(folder_name):
     if folder_name == 'noise': return 'Nhiễu/Khác'
     return mapping.get(folder_name, {}).get('denomination', folder_name)
 
-# 2. DATA AUGMENTATION (Nâng cấp: Rotate, Blur, Brightness)
+# 2. ANTI-OVERFITTING AUGMENTATION (Ép mô hình học khó hơn)
 IMG_SIZE = 224
 train_transform = transforms.Compose([
     transforms.Resize((IMG_SIZE, IMG_SIZE)),
-    transforms.RandomRotation(degrees=15),                   # Thêm Xoay
-    transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.2), # Thêm Độ sáng/Tương phản
-    transforms.GaussianBlur(kernel_size=(3, 3), sigma=(0.1, 2.0)),      # Thêm Blur
-    transforms.RandomHorizontalFlip(p=0.5),
+    transforms.RandomAffine(degrees=20, translate=(0.1, 0.1), scale=(0.8, 1.2)), # Biến dạng hình học
+    transforms.RandomPerspective(distortion_scale=0.2, p=0.5),                   # Thay đổi góc chụp
+    transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.3),       # Ánh sáng gắt
+    transforms.GaussianBlur(kernel_size=(3, 3), sigma=(0.1, 2.0)),              # Làm mờ ảnh
+    transforms.RandomHorizontalFlip(),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
@@ -49,91 +46,98 @@ val_test_transform = transforms.Compose([
 ])
 
 # 3. DATALOADER
-train_dataset = datasets.ImageFolder(train_dir, transform=train_transform)
-val_dataset = datasets.ImageFolder(val_dir, transform=val_test_transform)
-test_dataset = datasets.ImageFolder(test_dir, transform=val_test_transform)
+train_ds = datasets.ImageFolder(train_dir, transform=train_transform)
+val_ds = datasets.ImageFolder(val_dir, transform=val_test_transform)
+test_ds = datasets.ImageFolder(test_dir, transform=val_test_transform)
 
-batch_size = 32
-train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
-test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+train_loader = DataLoader(train_ds, batch_size=32, shuffle=True)
+val_loader = DataLoader(val_ds, batch_size=32, shuffle=False)
+test_loader = DataLoader(test_ds, batch_size=32, shuffle=False)
 
-num_classes = len(train_dataset.classes)
-
-# 4. MÔ HÌNH (Nâng cấp: Fine-tuning để Improve Accuracy)
+# 4. MODEL CẢI TIẾN (Thêm Dropout & Fine-tuning)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = models.resnet18(pretrained=True)
+model = models.resnet18(weights='IMAGENET1K_V1')
 
-# Đóng băng các layer đầu, nhưng mở layer3 và layer4 để học sâu hơn về tiền VN
-for name, child in model.named_children():
-    if name in ['layer3', 'layer4', 'fc']:
-        for param in child.parameters():
-            param.requires_grad = True
-    else:
-        for param in child.parameters():
-            param.requires_grad = False
+# Mở khóa layer 3 và 4 để fine-tune đặc trưng tiền Việt
+for name, param in model.named_parameters():
+    param.requires_grad = any(x in name for x in ['layer3', 'layer4', 'fc'])
 
-model.fc = nn.Linear(model.fc.in_features, num_classes)
+# Thay thế FC bằng Sequential có Dropout để chống Overfit
+num_ftrs = model.fc.in_features
+model.fc = nn.Sequential(
+    nn.Dropout(p=0.5),
+    nn.Linear(num_ftrs, len(train_ds.classes))
+)
 model = model.to(device)
 
-# Loss & Optimizer (Sử dụng LR nhỏ để fine-tune mượt hơn)
+# Optimizer với Weight Decay (L2 Regularization)
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=1e-5)
+optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), 
+                       lr=1e-5, weight_decay=1e-4)
 scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', patience=2, factor=0.5)
 
-# 5. TRAINING LOOP
-num_epochs = 20 # Bạn có thể tăng lên nếu cần
-best_val_acc = 0.0
+# 5. TRAINING VỚI EARLY STOPPING
+num_epochs = 50
+best_val_loss = float('inf')
+patience = 7  # Dừng nếu 7 epoch liên tiếp loss không giảm
+counter = 0
+
+print(f"Bắt đầu huấn luyện trên {device}...")
 
 for epoch in range(num_epochs):
     model.train()
-    train_loss, train_correct = 0.0, 0
-    for images, labels in tqdm(train_loader, desc=f"Epoch {epoch+1}/{num_epochs}"):
-        images, labels = images.to(device), labels.to(device)
+    t_loss, t_corr = 0.0, 0
+    for imgs, lbls in tqdm(train_loader, desc=f"Epoch {epoch+1}/{num_epochs}"):
+        imgs, lbls = imgs.to(device), lbls.to(device)
         optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, labels)
+        out = model(imgs)
+        loss = criterion(out, lbls)
         loss.backward()
         optimizer.step()
-        train_loss += loss.item() * images.size(0)
-        _, preds = torch.max(outputs, 1)
-        train_correct += torch.sum(preds == labels.data)
-    
-    train_acc = train_correct.double() / len(train_dataset)
-    
-    model.eval()
-    val_loss, val_correct = 0.0, 0
-    with torch.no_grad():
-        for images, labels in val_loader:
-            images, labels = images.to(device), labels.to(device)
-            outputs = model(images)
-            loss = criterion(outputs, labels)
-            val_loss += loss.item() * images.size(0)
-            _, preds = torch.max(outputs, 1)
-            val_correct += torch.sum(preds == labels.data)
-    
-    val_acc = val_correct.double() / len(val_dataset)
-    val_loss = val_loss / len(val_dataset)
-    scheduler.step(val_loss)
-    
-    print(f"Epoch {epoch+1}: Train Acc: {train_acc:.4f} | Val Acc: {val_acc:.4f} | Loss: {val_loss:.4f}")
-    
-    if val_acc > best_val_acc:
-        best_val_acc = val_acc
-        torch.save(model.state_dict(), model_save_path)
-        print(f"  --> Saved better model to {model_save_path}")
+        t_loss += loss.item() * imgs.size(0)
+        _, preds = torch.max(out, 1)
+        t_corr += torch.sum(preds == lbls.data)
 
-# 6. FINAL EVALUATION
-print("\n--- Đang đánh giá trên tập Test ---")
+    model.eval()
+    v_loss, v_corr = 0.0, 0
+    with torch.no_grad():
+        for imgs, lbls in val_loader:
+            imgs, lbls = imgs.to(device), lbls.to(device)
+            out = model(imgs)
+            loss = criterion(out, lbls)
+            v_loss += loss.item() * imgs.size(0)
+            _, preds = torch.max(out, 1)
+            v_corr += torch.sum(preds == lbls.data)
+
+    avg_v_loss = v_loss / len(val_ds)
+    avg_v_acc = v_corr.double() / len(val_ds)
+    scheduler.step(avg_v_loss)
+
+    print(f"Val Acc: {avg_v_acc:.4f} | Val Loss: {avg_v_loss:.4f}")
+
+    # Early Stopping Check (Dựa trên Loss thay vì Acc để chống ảo)
+    if avg_v_loss < best_val_loss:
+        best_val_loss = avg_v_loss
+        torch.save(model.state_dict(), model_save_path)
+        counter = 0
+        print(f"  --> Saved model to {model_save_path}")
+    else:
+        counter += 1
+        if counter >= patience:
+            print("Early Stopping! Model đã đạt ngưỡng tổng quát hóa tốt nhất.")
+            break
+
+# 6. KIỂM TRA CUỐI CÙNG
 model.load_state_dict(torch.load(model_save_path))
 model.eval()
-y_true, y_pred = [], []
+y_t, y_p = [], []
 with torch.no_grad():
-    for images, labels in test_loader:
-        outputs = model(images.to(device))
-        _, preds = torch.max(outputs, 1)
-        y_true.extend(labels.cpu().numpy())
-        y_pred.extend(preds.cpu().numpy())
+    for imgs, lbls in test_loader:
+        out = model(imgs.to(device))
+        _, preds = torch.max(out, 1)
+        y_t.extend(lbls.numpy())
+        y_p.extend(preds.cpu().numpy())
 
-class_names = [get_denomination_from_folder(cls) for cls in train_dataset.classes]
-print(classification_report(y_true, y_pred, target_names=class_names))
+target_names = [get_name(c) for c in train_ds.classes]
+print("\n=== FINAL CLASSIFICATION REPORT ===")
+print(classification_report(y_t, y_p, target_names=target_names))
