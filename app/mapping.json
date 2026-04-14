@@ -1,8 +1,8 @@
 {
     "000200": {
         "denomination": "200",
-        "place": "Cánh đồng lúa Tây Nguyên",
-        "description": "Hình ảnh máy cày trên cánh đồng biểu tượng cho sự chuyển mình từ nông nghiệp thô sơ sang cơ giới hóa. Đây là tờ tiền hiếm hoi tôn vinh lao động sản xuất thay vì một công trình kiến trúc cụ thể",
+        "place": "Vườn cây cao su Tây Nguyên",
+        "description": "Hình ảnh vườn cao su xanh mướt trên vùng đất đỏ bazan biểu tượng cho nền nông nghiệp công nghiệp hóa. Tờ tiền tôn vinh sản phẩm xuất khẩu chủ lực và sự chuyển mình của nền kinh tế nông nghiệp Việt Nam",
         "type": "Tiền giấy"
     },
     "000500": {
@@ -13,14 +13,14 @@
     },
     "001000": {
         "denomination": "1000",
-        "place": "Khai thác gỗ tại Tây Nguyên",
-        "description": "Khung cảnh những chú voi và người thợ rừng làm việc giữa đại ngàn xanh thẳm của vùng đất đỏ bazan. Hình ảnh gợi nhớ về một thời kỳ khai thác tài nguyên và vẻ đẹp lao động đặc trưng của vùng cao",
+        "place": "Khai thác gỗ Tây Nguyên",
+        "description": "Công nhân lâm nghiệp đang khai thác gỗ giữa đại ngàn xanh thẳm vùng đất đỏ bazan. Hình ảnh thể hiện vẻ đẹp lao động và tài nguyên rừng phong phú của Tây Nguyên một thời",
         "type": "Tiền giấy"
     },
     "002000": {
         "denomination": "2000",
-        "place": "Cánh đồng lúa Tây Nguyên",
-        "description": "Nơi đây từng là nhà máy dệt lớn nhất Đông Dương, mang đậm dấu ấn lịch sử của phong trào công nhân Việt Nam. Hình ảnh các nữ công nhân bên máy dệt thể hiện tinh thần lao động hăng say thời kỳ đổi mới",
+        "place": "Nhà máy dệt Nam Định",
+        "description": "Nhà máy dệt lớn nhất Đông Dương thời Pháp thuộc, biểu tượng của phong trào công nhân Việt Nam. Hình ảnh các nữ công nhân bên máy dệt thể hiện tinh thần lao động hăng say thời kỳ đổi mới",
         "type": "Tiền giấy"
     },
     "005000": {
@@ -38,7 +38,7 @@
     "020000": {
         "denomination": "20000",
         "place": "Chùa Cầu (Hội An)",
-        "description": "Chùa Cầu là một trong những công trình kiến trúc nổi tiếng nhất của Hội An, thể hiện sự giao thoa văn hóa giữa Việt Nam và các nước phương Tây. Hình ảnh này khắc họa giá trị văn hóa và lịch sử của thành phố cổ",
+        "description": "Chùa Cầu là một trong những công trình kiến trúc nổi tiếng nhất của Hội An, thể hiện sự giao thoa văn hóa Việt - Nhật. Hình ảnh này khắc họa giá trị văn hóa và lịch sử của thành phố cổ",
         "type": "Tiền polymer"
     },
     "050000": {
@@ -50,7 +50,7 @@
     "100000": {
         "denomination": "100000",
         "place": "Khuê Văn Các (Văn Miếu - Quốc Tử Giám)",
-        "description": "Khuê Văn Các là một trong những công trình kiến trúc nổi tiếng nhất của Văn Miếu - Quốc Tử Giám, thể hiện sự giao thoa văn hóa giữa Việt Nam và các nước phương Tây. Hình ảnh này khắc họa giá trị văn hóa và lịch sử của thành phố cổ",
+        "description": "Tháp rùa vàng nổi bật giữa hồ Thiên Quang tại Văn Miếu - Quốc Tử Giám, biểu tượng của truyền thống hiếu học nghìn năm văn hiến Việt Nam. Công trình mang kiến trúc Á Đông độc đáo tôn vinh nền giáo dục cổ kính của dân tộc",
         "type": "Tiền polymer"
     },
     "200000": {
